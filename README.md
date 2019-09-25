@@ -6,7 +6,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primarykey|
-|name|string||null: false|
+|name|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
 ### Association
@@ -18,7 +18,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primarykey|
-|body|text||null: false|
+|body|text|null: false|
 |image|string|public/uploads/*|
 |group_id|integer|null: false, foreign_key: true, unique: true|
 |user_id|integer|null: false, foreign_key: true, unique: true|
@@ -30,7 +30,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primarykey|
-|name|string||null: false,  unique: true|
+|name|string|null: false,  unique: true|
 ### Association
 - has_many :messages
 - has_many :group_members
