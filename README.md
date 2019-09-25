@@ -18,7 +18,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primarykey|
-|body|text|null: false|
+|body|text||
 |image|string|public/uploads/*|
 |group_id|integer|null: false, foreign_key: true, unique: true|
 |user_id|integer|null: false, foreign_key: true, unique: true|
