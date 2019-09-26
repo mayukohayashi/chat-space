@@ -1,6 +1,8 @@
 !!!
 %html
   %head
+  %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %title ChatSpace
   %body
   %div.flash-box
     グループを作成しました
@@ -11,10 +13,10 @@
           %p.side-header__box__user-name
             はやし
           %ul.side-header__box__menu
-            %li.side-header__box__menu__new-group
-              Writeここにボタン
-            %li.side-header__box__menu__setting
-              Settingここにボタン
+            = link_to "/groups/new", class: "side-header__box__menu__new-group" do
+              = fa_icon 'edit'
+            = link_to "/users/id/edit", class: "side-header__box__menu__setting" do
+              = fa_icon 'cog'
       %div.groups
         %div.group
           %p.group__group-name
