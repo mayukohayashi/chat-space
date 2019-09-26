@@ -13,11 +13,12 @@
           %p.side-header__box__user-name
             はやし
           %ul.side-header__box__menu
-            = link_to "/groups/new", class: "side-header__box__menu__new-group" do
+            = link_to "messages/new", class: "side-header__box__menu__new-group" do
               = fa_icon 'edit'
-            = link_to "/users/id/edit", class: "side-header__box__menu__setting" do
+            = link_to "messages/edit", class: "side-header__box__menu__setting" do
               = fa_icon 'cog'
       %div.groups
+        = link_to ""
         %div.group
           %p.group__group-name
             サンプルグルー府（リンクいるrendeeer）
