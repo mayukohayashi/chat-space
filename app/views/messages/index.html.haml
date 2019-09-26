@@ -21,13 +21,14 @@
           = link_to "messages/group", class: "group" do
             = render "messages/group", class: "group_render"
       %div.chat-main
-        %div.chat-main__header
-          %h2.chat-main__header__current-group
-            サンプルグループ
-          %ul.chat-main__header__member-list
-            Member:
-            %li.chat-main__header__member-list__member
-              名前、名前、名前
+        %dev.chat-main__header
+          %div.hat-main__header__leftbox
+            %h2.chat-main__header__leftbox__current-group
+              サンプルグループ
+            %ul.chat-main__header__leftbox__member-list
+              Member:
+              %li.chat-main__header____leftbox__member-list__member
+                名前、名前、名前
           %div.chat-main__header__edit-btn
             Edit
         %div.chat-main__messages

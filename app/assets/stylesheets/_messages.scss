@@ -47,6 +47,7 @@ p {
       background-color: $menu-background;
       display: flex;
       padding: 20px 20px 0;
+      margin-bottom: 40px;
       &__group{
         margin: 0 0 40px;
       }
@@ -56,12 +57,8 @@ p {
   .chat-main{
     width: calc(100vw - 300px);
     text-decoration: none;
+    position: relative;
     @include font();
-    &__header{
-      height: 100px;
-      position: relative;
-      padding: 0 40px;
-    }
   }
 }
 
