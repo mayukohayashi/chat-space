@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   get 'messages/new' => 'messages#new'
   get 'messages/edit' => 'messages#edit'
   get 'messages/message' => 'messages#message'
+  get 'messages/group' => 'messages#group'
+
 end
