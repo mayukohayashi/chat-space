@@ -2,24 +2,23 @@
 %html
   %head
   %body
-  .header
-    .header__message<>
-      グループを作成しました
-  .contents
-    .left-contents
-      .left-contents__account
+  %div.flash-box
+    グループを作成しました
+  %div.wrapper
+    %div.chat-side
+      %div.side-header
         .account__name
           はやし
         .account__btn
           Write
         .account__btn
           Setting
-      .left-contents__group-name
+      %div.groups
         .group-name__title
           サンプル
         .group-name__message
           さよなら
-    .right-contents
+    %div.chat-main
       .right-contents__group-member
         .group-member__title
           sample
