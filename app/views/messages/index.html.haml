@@ -19,7 +19,10 @@
               = fa_icon 'cog'
       %div.groups
         = link_to "messages/group", class: "group" do
-          = render partial: 'group', collection: @groups
+          %p.group__group-name
+            グループネーム
+          %p.group__latest-message
+            グループの最新メッセージ
     %div.chat-main
       %div.main-header
         %div.main-header__right-box
@@ -35,11 +38,11 @@
         %div.message
           %div.message__upper-info
             %p.message__upper-info__chatter
-              はやし
+              パパパ
             %p.message__upper-info__date
               2019/09/25 18:29:21
           %p.message__text
-            さようなら
+            つかれた
       %div.form
         %form.new_message#new_message
           %div.input-box
