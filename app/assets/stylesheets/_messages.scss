@@ -19,6 +19,7 @@ p {
   background-color: $send-color;
   text-decoration: none;
   text-align: center;
+  @include font();
 }
 
 .chat-side {
@@ -26,9 +27,11 @@ p {
   width: 300px;
   color: $base;
   float: left;
+  @include font();
 }
 
 .chat-main {
   width: calc(100vw - 300px);
   float: left;
+  @include font();
 }

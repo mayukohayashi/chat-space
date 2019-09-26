@@ -1,0 +1,4 @@
+@mixin font($font-size: 16px) {
+  font-size: $font-size;
+  font-style: Times;
+}
