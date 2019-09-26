@@ -6,35 +6,36 @@
   %body
     %div.flash-box
       グループを作成しました
-    %div.chat-side
-      %div.chat-side__header
-        %p.chat-side__header__user-name
-          はやし
-        %ul.chat-side__header__menu
-          = link_to "messages/new", class: "side-header__box__menu__new-group" do
-            = fa_icon 'edit'
-            %span<>
-          = link_to "messages/edit", class: "side-header__box__menu__setting" do
-            = fa_icon 'cog'
-      %div.chat-side__groups
-        = link_to "messages/group", class: "group" do
-          = render "messages/group", class: "group_render"
-    %div.chat-main
-      %div.chat-main__header
-        %h2.chat-main__header__current-group
-          サンプルグループ
-        %ul.chat-main__header__member-list
-          Member:
-          %li.chat-main__header__member-list__member
-            名前、名前、名前
-        %div.chat-main__header__edit-btn
-          Edit
-      %div.chat-main__messages
-        = render "messages/message", class: "message_render"
-      %div.chat-main__form
-        %input.input-box__text
-          placeholder=typeamessage
-        %label.input-box__image
-          ここにアイコン
-        %input.submit-btn
-          Send
+    %div.wrapper
+      %div.chat-side
+        %div.chat-side__header
+          %p.chat-side__header__user-name
+            はやし
+          %ul.chat-side__header__menu
+            = link_to "messages/new", class: "side-header__box__menu__new-group" do
+              = fa_icon 'edit'
+              %span<>
+            = link_to "messages/edit", class: "side-header__box__menu__setting" do
+              = fa_icon 'cog'
+        %div.chat-side__groups
+          = link_to "messages/group", class: "group" do
+            = render "messages/group", class: "group_render"
+      %div.chat-main
+        %div.chat-main__header
+          %h2.chat-main__header__current-group
+            サンプルグループ
+          %ul.chat-main__header__member-list
+            Member:
+            %li.chat-main__header__member-list__member
+              名前、名前、名前
+          %div.chat-main__header__edit-btn
+            Edit
+        %div.chat-main__messages
+          = render "messages/message", class: "message_render"
+        %div.chat-main__form
+          %input.input-box__text
+            placeholder=typeamessage
+          %label.input-box__image
+            ここにアイコン
+          %input.submit-btn
+            Send

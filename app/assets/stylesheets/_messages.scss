@@ -21,33 +21,46 @@ p {
   @include font();
 }
 
-.chat-side {
-  height: auto;
-  width: 300px;
-  color: $base;
-  float: left;
-  text-decoration: none;
-  @include font();
-  @include linkColor();
-  &__header {
-    background-color: $account-background;
-    display: flex;
-    height: 100px;
-    padding: 0 20px;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-    &__user-name{
-      font-weight: bold;
+.wrapper{
+  display: flex;
+  .chat-side {
+    height: auto;
+    width: 300px;
+    color: $base;
+    text-decoration: none;
+    @include font();
+    @include linkColor();
+    &__header {
+      background-color: $account-background;
+      display: flex;
+      height: 100px;
+      padding: 0 20px;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: center;
+      &__user-name{
+        font-weight: bold;
+      }
+    }
+    &__groups{
+      height: calc(100vh - 100px);
+      background-color: $menu-background;
+      display: flex;
+      padding: 20px 20px 0;
+      &__group{
+        margin: 0 0 40px;
+      }
     }
   }
-  &__groups{
-    height: calc(100vh - 100px);
-    background-color: $menu-background;
-    display: flex;
-    padding: 20px 20px 0;
-    &__group{
-      margin: 0 0 40px;
+
+  .chat-main{
+    width: calc(100vw - 300px);
+    text-decoration: none;
+    @include font();
+    &__header{
+      height: 100px;
+      position: relative;
+      padding: 0 40px;
     }
   }
 }
