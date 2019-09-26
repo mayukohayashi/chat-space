@@ -2,3 +2,10 @@
   font-size: $font-size;
   font-style: Times;
 }
+
+@mixin linkColor($color:#fff){
+  a:link { color: $color; }
+  a:visited { color: $color; }
+  a:hover { color: $color; }
+  a:active { color: $color; }
+}

@@ -28,6 +28,15 @@ p {
   color: $base;
   float: left;
   @include font();
+  @include linkColor();
+}
+
+.side-header {
+
+
+  &:visited {
+
+  }
 }
 
 .chat-main {
