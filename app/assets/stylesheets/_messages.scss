@@ -6,12 +6,7 @@ a {
   text-decoration: none;
 }
 
-div {
-  display: block;
-}
-
 p {
-  display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
@@ -55,4 +50,12 @@ p {
       margin: 0 0 40px;
     }
   }
+}
+
+.grouo-name{
+  margin: 0 0 5px;
+  @include font(15px)
+}
+.latest-message{
+  @include font(11px);
 }
