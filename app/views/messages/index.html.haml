@@ -7,36 +7,44 @@
   %div.wrapper
     %div.chat-side
       %div.side-header
-        .account__name
-          はやし
-        .account__btn
-          Write
-        .account__btn
-          Setting
+        %div.side-header__box
+          %p.side-header__box__user-name
+            はやし
+          %ul.side-header__box__menu
+            %li.side-header__box__menu__new-group
+              Writeここにボタン
+            %li.side-header__box__menu__setting
+              Settingここにボタン
       %div.groups
-        .group-name__title
-          サンプル
-        .group-name__message
-          さよなら
+        %div.group
+          %p.group__group-name
+            サンプルグルー府（リンクいるrendeeer）
+          %p.group__latest-message
+            サンプル会話
     %div.chat-main
-      .right-contents__group-member
-        .group-member__title
-          sample
-        .group-member__members
-          名前、名前、名前、名前
-        .group-member__btn
-          Edit
-      .right-contents__messages
-        .messages__name
-          はやし
-        .messages__date
-          2019/09/25 18:29:21
-        .messages__main
-          さようなら
-      .right-contents__input
-        .input__textarea
-          ここに書く
-        .input__image
-          貼り方あとでチェック
-        .input__btn
-          Send
+      %div.main-header
+        %div.main-header__right-box
+          %h2.main-header__right-box__current-group
+            サンプルグループ（リンクいる）
+          %ul.main-header__right-box__member-list
+            %li.main-header__right-box__member-list__member
+            はやし（ここ横にレンダー）
+        %div.main-header__edit-btn
+      %div.messages
+        %div.message
+          %div.message__upper-info
+            %p.message__upper-info__chatter
+              はやし
+            %p.message__upper-info__date
+              2019/09/25 18:29:21
+          %p.message__text
+            さようなら
+      %div.form
+        %form.new_message#new_message
+          %div.input-box
+            %input.input-box__text
+              placeholder=typeamessage
+            %label.input-box__image
+              ここにアイコン
+          %input.submit-btn
+            Send
