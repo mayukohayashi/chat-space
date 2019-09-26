@@ -56,9 +56,14 @@ p {
 
   .chat-main{
     width: calc(100vw - 300px);
+    height: auto;
     text-decoration: none;
     position: relative;
     @include font();
+    &__header{
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -66,6 +71,7 @@ p {
   margin: 0 0 5px;
   @include font(15px)
 }
+
 .latest-message{
   @include font(11px);
 }
