@@ -2,6 +2,10 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 div {
   display: block;
 }
@@ -27,6 +31,7 @@ p {
   width: 300px;
   color: $base;
   float: left;
+  text-decoration: none;
   @include font();
   @include linkColor();
   &__header {
@@ -46,7 +51,15 @@ p {
     background-color: $menu-background;
     display: flex;
     padding: 20px 20px 0;
-    &__group-name{
+    &__group{
+      margin: 0 0 40px;
+      &__name{
+        margin: 0 0 5px;
+        @include font(15px)
+      }
+      &__latest-message{
+        @include font(11px);
+      }
     }
   }
 }
