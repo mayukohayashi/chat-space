@@ -29,20 +29,21 @@ p {
   float: left;
   @include font();
   @include linkColor();
-}
-
-.side-header {
-  background-color: $account-background;
-  display: flex;
-  height: 100px;
-  padding: 0 20px;
-  margin: 0 auto;
-  justify-content: space-between;
-  
-}
-
-.chat-main {
-  width: calc(100vw - 300px);
-  float: left;
-  @include font();
+  &__header {
+    background-color: $account-background;
+    display: flex;
+    height: 100px;
+    padding: 0 20px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    &__user-name{
+      font-weight: bold;
+    }
+  }
+  &__groups{
+    height: calc(100vh - 100px);
+    background-color: $menu-background;
+    display: flex;
+  }
 }
