@@ -19,10 +19,7 @@
               = fa_icon 'cog'
       %div.groups
         = link_to "messages/group", class: "group" do
-          %p.group__group-name
-            グループネーム
-          %p.group__latest-message
-            グループの最新メッセージ
+          = render "messages/group", class: "group_render"
     %div.chat-main
       %div.main-header
         %div.main-header__right-box
@@ -35,14 +32,7 @@
         %div.main-header__edit-btn
           Edit
       %div.messages
-        %div.message
-          %div.message__upper-info
-            %p.message__upper-info__chatter
-              パパパ
-            %p.message__upper-info__date
-              2019/09/25 18:29:21
-          %p.message__text
-            つかれた
+        =render "messages/message", class: "message_render"
       %div.form
         %form.new_message#new_message
           %div.input-box
