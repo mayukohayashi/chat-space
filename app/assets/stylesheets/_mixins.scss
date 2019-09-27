@@ -9,3 +9,8 @@
   a:hover { color: $color; }
   a:active { color: $color; }
 }
+
+@mixin flexParent{
+  display: flex;
+  justify-content: space-between;
+}

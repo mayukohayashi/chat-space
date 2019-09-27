@@ -1,17 +1,3 @@
-::-webkit-scrollbar {
-  display: none;
-  -webkit-appearance: none;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  margin: 2px
-}
-
 .flash-box {
   height: auto;
   background-color: $send-color;
@@ -37,12 +23,11 @@ a {
     @include linkColor();
     &__header {
       background-color: $account-background;
-      display: flex;
       height: 100px;
       padding: 0 20px;
       margin: 0 auto;
-      justify-content: space-between;
       align-items: center;
+      @include flexParent;
       &__user-name{
         font-weight: bold;
       }
@@ -70,12 +55,11 @@ a {
     flex-flow: column;
     min-height: 100vh;
     &__header{
-      display: flex;
       position: relative;
-      justify-content: space-between;
       border-bottom: solid 1px #eee;
       padding: 0 40px;
       height: 100px;
+      @include flexParent;
       &__leftbox{
         margin-top: 35px;
         &__current-group{
@@ -104,7 +88,7 @@ a {
     }
     &__messages{
       padding: 46px 40px;
-      background-color: #fafafa;
+      background-color: $messages-background;
       min-height: calc(100vh - 300px);
     }
     &__form{
@@ -115,17 +99,15 @@ a {
       flex: 1;
       padding: 20px 40px;
       &__new-message{
-        display: flex;
         position: relative;
-        justify-content: space-between;
+        @include flexParent;
         &__input-box{
-          display: flex;
           position: relative;
           height: 50px;
           width: 100%;
-          color: #434a54;
+          color: $other-fontcolor;
           border-style: none;
-          justify-content: space-between;
+          @include flexParent;
           &__text{
             width: 100%;
             padding: 0 40px 0 10px;
@@ -144,8 +126,8 @@ a {
           height: 50px;
           padding: 0 30px;
           margin-left: 15px;
-          background-color: #38aef0;
-          color: white;
+          background-color: $send-color;
+          color: $base;
           cursor: pointer;
         }
       }
