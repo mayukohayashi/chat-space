@@ -9,8 +9,6 @@
 .wrapper{
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  left: 0;
   display: flex;
   min-height: 100vh;
   @include font();
@@ -25,11 +23,13 @@
       background-color: $account-background;
       height: 100px;
       padding: 0 20px;
-      margin: 0 auto;
       align-items: center;
       @include flexParent;
       &__user-name{
         font-weight: bold;
+      }
+      &__menu{
+        letter-spacing: 5px;
       }
     }
     &__groups{
@@ -37,7 +37,6 @@
       background-color: $menu-background;
       display: flex;
       padding: 20px 20px 0;
-      margin-bottom: 40px;
       overflow-y: scroll;
       &__group{
         margin: 0 0 40px;
@@ -45,7 +44,7 @@
     }
   }
   .chat-main{
-    width: calc(100vw - 300px);
+    width: calc(100vw - 190px);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -93,9 +92,7 @@
     &__form{
       height: 90px;
       background-color: #ddd;
-      margin-top: auto;
       bottom: 0;
-      flex: 1;
       padding: 20px 40px;
       &__new-message{
         position: relative;
