@@ -35,10 +35,10 @@
           = render "messages/message", class: "message_render"
         %div.chat-main__form
           %form#new_message.chat-main__form__new-message
-            %div.chat-main__form__new_message__input-box
-              %input#message_content.chat-main__form__new_message__input-box__text{:placeholder => "type a message", :type => "text"}
-              %label.chat-main__form__new_message__input-box__image{:for => "message_image"}
+            %div.chat-main__form__new-message__input-box
+              %input#message_content.chat-main__form__new-message__input-box__text{:placeholder => "type a message", :type => "text"}
+              %label.chat-main__form__new-message__input-box__image{:for => "message_image"}
                 %i.fa.fa-picture-o
-                %input#message_image.chat-main__form__new_message__input-box__image__file{:name => "message[image]", :type => "file"}
+                %input#message_image.chat-main__form__new-message__input-box__image__file{:name => "message[image]", :type => "file"}
             %input.chat-main__form__new-message__submit-btn{:type => "submit", :value => "Send"}
 
