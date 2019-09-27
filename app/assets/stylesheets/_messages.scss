@@ -152,38 +152,3 @@ a {
     }
   }
 }
-
-
-.group-name{
-  margin: 0 0 5px;
-  @include font(15px)
-}
-
-.latest-message{
-  @include font(11px);
-}
-
-
-
-.message{
-  padding-bottom: 40px;
-  &__upper-info{
-    display: flex;
-    margin-bottom: 10px;
-    &__chatter{
-      color: $other-fontcolor;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    &__date{
-      color: $date-fontcolor;
-      font-size: 12px;
-      margin-left: 10px;
-    }
-  }
-  &__text{
-    color: $other-fontcolor;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-}
