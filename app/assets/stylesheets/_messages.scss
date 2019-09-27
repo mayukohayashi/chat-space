@@ -110,11 +110,39 @@ a {
       min-height: 100vh;
     }
     &__form{
-    position: fixed;
-    bottom: 0;
-    margin-top: auto;
-    }
+      position: fixed;
+      bottom: 0;
+      margin-top: auto;
+      height: 90px;
+      padding: 20px 40px;
+      background-color: #ddd;
+      &__new-message{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        &__input-box{
+          display: flex;
+          position: relative;
+          &__text{
 
+          }
+          &__image{
+            &__file{
+              display: none;
+            }
+          }
+        }
+        &__submit-btn{
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 
