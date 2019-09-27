@@ -113,8 +113,9 @@
           }
           &__image{
             position: absolute;
-            top: 15px;
+            top: 10px;
             right: 10px;
+            @include font(25px);
             &__file{
               display: none;
             }
