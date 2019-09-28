@@ -39,6 +39,13 @@
       padding: 20px 20px 0;
       &__group{
         margin: 0 0 40px;
+        &__group-name{
+          margin: 0 0 5px;
+          @include font(15px)
+        }
+        &__latest-message{
+          @include font(11px);
+        }
       }
     }
   }
