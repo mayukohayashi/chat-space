@@ -9,9 +9,9 @@
         = link_to edit_user_path(current_user) do
           = fa_icon 'cog', class: "side-header__box__menu__setting"
     %div.chat-side__groups
-      %div.chat-side__groups__group
-        - current_user.groups.each do |group|
-          = link_to '#' do
+      - current_user.groups.each do |group|
+        %div.chat-side__groups__group
+          = link_to group_messages_path(group) do
             %p.chat-side__groups__group__group-name
               = group.name
             %p.chat-side__groups__group__latest-message
@@ -27,6 +27,7 @@
             名前
       %div.chat-main__header__edit-btn
         Edit
+        -# group 編集
     %div.chat-main__messages
       = render "messages/message", class: "message_render"
     %div.chat-main__form
