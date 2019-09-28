@@ -1,0 +1,131 @@
+.flash-box {
+  height: auto;
+  background-color: $send-color;
+  text-decoration: none;
+  text-align: center;
+  @include font();
+}
+
+.wrapper{
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  min-height: 100vh;
+  @include font();
+  .chat-side {
+    min-height: 100vh;
+    width: 300px;
+    color: $base;
+    text-decoration: none;
+    @include font();
+    @include linkColor();
+    &__header {
+      background-color: $account-background;
+      height: 100px;
+      padding: 0 20px;
+      align-items: center;
+      @include flexParent;
+      &__user-name{
+        font-weight: bold;
+      }
+      &__menu{
+        letter-spacing: 5px;
+      }
+    }
+    &__groups{
+      height: calc(100vh - 100px);
+      background-color: $menu-background;
+      display: flex;
+      padding: 20px 20px 0;
+      &__group{
+        margin: 0 0 40px;
+      }
+    }
+  }
+  .chat-main{
+    width: calc(100vw - 190px);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    &__header{
+      position: relative;
+      border-bottom: solid 1px #eee;
+      padding: 0 40px;
+      height: 100px;
+      @include flexParent;
+      &__leftbox{
+        margin-top: 35px;
+        &__current-group{
+          font-size: 20px;
+          color: $main-fontcolor;
+        }
+        &__member-list{
+          font-size: 12px;
+          color: $date-fontcolor;
+          display: flex;
+          &__member{
+            display: list-item;
+          }
+        }
+      }
+      &__edit-btn{
+        color: $send-color;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin-top: 30px;
+        border: solid 1px #38aef0;
+        position: absolute;
+        right: 40px;
+      }
+    }
+    &__messages{
+      padding: 46px 40px;
+      background-color: $messages-background;
+      min-height: calc(100vh - 300px);
+    }
+    &__form{
+      height: 90px;
+      background-color: #ddd;
+      bottom: 0;
+      padding: 20px 40px;
+      &__new-message{
+        position: relative;
+        @include flexParent;
+        &__input-box{
+          position: relative;
+          height: 50px;
+          width: 100%;
+          color: $other-fontcolor;
+          border-style: none;
+          @include flexParent;
+          &__text{
+            width: 100%;
+            padding: 0 40px 0 10px;
+          }
+          &__image{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            @include font(25px);
+            &__file{
+              display: none;
+            }
+          }
+        }
+        &__submit-btn{
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: $send-color;
+          color: $base;
+        }
+      }
+    }
+  }
+}
