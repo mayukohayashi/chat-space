@@ -4,7 +4,7 @@
       %p.chat-side__header__user-name
         = current_user.name
       %ul.chat-side__header__menu
-        = link_to do
+        = link_to new_group_path do
           = fa_icon 'pencil-square-o', class: 'icon'
         = link_to edit_user_path(current_user) do
           = fa_icon 'cog', class: "side-header__box__menu__setting"
