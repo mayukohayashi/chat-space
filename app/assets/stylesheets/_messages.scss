@@ -49,6 +49,7 @@
       min-height: calc(100vh - 190px);
       box-sizing: border-box;
       overflow-y: scroll;
+      display: block;
     }
     &__form{
       box-sizing: border-box;

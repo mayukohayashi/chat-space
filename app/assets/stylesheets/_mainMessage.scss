@@ -14,8 +14,10 @@
   }
   &__text{
     color: $other-fontcolor;
-    font-size: 14px;
     margin-top: 10px;
-    margin-bottom: 40px;
+    &__content {
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
   }
 }
