@@ -2,13 +2,11 @@
   display: flex;
   min-height: 100vh;
   @include font();
+  @include flexParent();
   .chat-main{
     width: calc(100vw - 300px);
-    position: -webkit-sticky;
-    position: sticky;
     display: flex;
     flex-flow: column;
-    min-height: 100vh;
     &__header{
       position: relative;
       border-bottom: solid 1px #eee;
@@ -46,8 +44,9 @@
     &__messages{
       padding: 46px 40px 0;
       background-color: $messages-background;
-      min-height: calc(100vh - 190px);
+      height: calc(100vh - 190px);
       box-sizing: border-box;
+      overflow: scroll;
     }
     &__form{
       box-sizing: border-box;
