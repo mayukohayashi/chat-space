@@ -13,7 +13,7 @@
         Edit
         -# group 編集
     %div.chat-main__messages
-      = render "messages/message", class: "message_render"
+      = render @messages
     %div.chat-main__form
       = form_for [@group, @message], html: {class: "chat-main__form__new-message"} do |f|
         %div.chat-main__form__new-message__input-box
