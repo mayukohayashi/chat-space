@@ -1,22 +1,22 @@
-%div.wrapper
+.wrapper
   = render "groups/side-bar",class: "side-bar_render"
-  %div.chat-main
-    %dev.chat-main__header
-      %div.chat-main__header__leftbox
+  .chat-main
+    .chat-main__header
+      .chat-main__header__leftbox
         %h2.chat-main__header__leftbox__current-group
           group name
         %ul.chat-main__header__leftbox__member-list
           Member:
           %li.chat-main__header____leftbox__member-list__member
             名前
-      %div.chat-main__header__edit-btn
+      .chat-main__header__edit-btn
         Edit
         -# group 編集
-    %div.chat-main__messages
+    .chat-main__messages
       = render @messages
-    %div.chat-main__form
+    .chat-main__form
       = form_for [@group, @message], html: {class: "chat-main__form__new-message"} do |f|
-        %div.chat-main__form__new-message__input-box
+        .chat-main__form__new-message__input-box
           = f.text_field :content, class: 'chat-main__form__new-message__input-box__text', placeholder: 'type a message'
           = f.label :image, class: 'chat-main__form__new-message__input-box__image' do
             = fa_icon 'picture-o'
