@@ -36,44 +36,32 @@ $(document).on('turbolinks:load', function(){
         contentType: false
       })
     .done(function(data){
+
+      function scrollBottom(){
+        var target = $('.chat-main__messages').last();
+        var position = target.offset().top + $('.chat-main__messages').scrollTop();
+        $('.chat-main__messages').animate({scrollTop: position}, 1000, 'swing');
+      }
+
         var html = buildHTML(data);
         $('.chat-main__messages').append(html);
         $('#message_content').val('');
+        scrollBottom();
+            })
 
-        var $target = $('.chat-main__messages');
-        $target.animate({scrollTop: $target.height()}, 1000);
-
-        // function test(){
-        //   var a = document.documentElement;
-        //   var y = a.scrollHeight - a.clientHeight;
-        //   window.scroll(0, y);
-        // }
-
-      })
       .fail(function(data){
         alert('エラーが発生したためメッセージは送信できませんでした。');
+      })
+      .always(function(data){
+        $('.chat-main__form__new-message__submit-btn').prop('disabled', false);
       })
     })
   })
 
+  // function scrollBottom(){
+  //   var a = document.documentElement;
+  //   var y = a.scrollHeight - a.clientHeight;
+  //   window.scroll(0, y);
+  // }
 
-
-// $("html,body").animate({scrollTop:$('セレクタ').offset().top});
-
-  // });
-  // var num = 0;
-  // $('#add').on('click', function() {
-  //   $('#target').append('<p>' + (num++) + '</p>');
-
-  //   $('#target').animate({scrollTop: $('#target')[0].scrollHeight}, 'fast');
-
-//   // scrolldown()
-
-//   var $target = $('html,body');
-// $target.animate({scrollTop: $target.height()}, 1000);
-
-
-
-        // var $target = $('html,body');
-        // $target.animate({scrollTop: $target.height()}, 1000);
-        // $(".chat-main__messages").animate({ scrollTop: $("#myID").scrollTop() }, 1000);
+  // $("html,body").animate({scrollTop:$('#header').offset().top});
