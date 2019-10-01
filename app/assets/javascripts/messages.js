@@ -38,7 +38,7 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
 
       function scrollBottom(){
-        var target = $('.chat-main__messages').last();
+        var target = $('.messages').last();
         var position = target.offset().top + $('.chat-main__messages').scrollTop();
         $('.chat-main__messages').animate({scrollTop: position}, 1000, 'swing');
       }
@@ -57,11 +57,3 @@ $(document).on('turbolinks:load', function(){
       })
     })
   })
-
-  // function scrollBottom(){
-  //   var a = document.documentElement;
-  //   var y = a.scrollHeight - a.clientHeight;
-  //   window.scroll(0, y);
-  // }
-
-  // $("html,body").animate({scrollTop:$('#header').offset().top});
