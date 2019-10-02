@@ -47,7 +47,7 @@ $(document).on('turbolinks:load', function(){
         $('.chat-main__messages').append(html);
         $('#message_content').val('');
         scrollBottom();
-            })
+      })
 
       .fail(function(data){
         alert('エラーが発生したためメッセージは送信できませんでした。');
