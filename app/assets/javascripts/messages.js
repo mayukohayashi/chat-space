@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function(){
 
                     </p>
                     <p class="message__text__content">
-                      ${content}
+                      ${message.content}
                     </p>
                     <p>
                       ${img}
