@@ -11,7 +11,7 @@
             名前
       .chat-main__header__edit-btn
         Edit
-        -# group 編集
+        -# = link_to "Edit", edit_group_path(@group.id)
     .chat-main__messages
       = render @messages
     .chat-main__form
