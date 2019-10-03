@@ -3,7 +3,7 @@ require 'rails_helper'
 describe MessagesController do
   let(:group) { create(:group) }
   let(:user) { create(:user) }
-  
+
   describe '#index' do
 
     context 'log in' do
@@ -20,7 +20,7 @@ describe MessagesController do
         expect(assigns(:group)).to eq group
       end
 
-      it 'redners index' do
+      it 'renders index' do
         expect(response).to render_template :index
       end
     end
