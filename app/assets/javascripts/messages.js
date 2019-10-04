@@ -25,7 +25,7 @@ $(document).on('turbolinks:load', function(){
     $('#new_message').on('submit', function(e){
       e.preventDefault();
       var message = new FormData(this);
-      var url = (window.location.href);
+      var url = $(this).attr('action');
       $.ajax({
         url: url,
         type: 'POST',
@@ -36,17 +36,17 @@ $(document).on('turbolinks:load', function(){
       })
     .done(function(data){
 
-      function scrollBottom(){
-        var target = $('.messages').last();
-        var position = target.offset().top + $('.chat-main__messages').scrollTop();
-        $('.chat-main__messages').animate({scrollTop: position}, 1000, 'swing');
-      }
+      // function scrollBottom(){
+      //   var target = $('.messages').last();
+      //   var position = target.offset().top + $('.chat-main__messages').scrollTop();
+      //   $('.chat-main__messages').animate({scrollTop: position}, 1000, 'swing');
+      // }
 
         var html = buildHTML(data);
         $('.chat-main__messages').append(html);
         $('#message_content').val('');
-        scrollBottom();
-      })
+        $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight});
+    })
 
       .fail(function(data){
         alert('エラーが発生したためメッセージは送信できませんでした。');
