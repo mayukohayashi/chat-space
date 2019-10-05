@@ -1,4 +1,5 @@
 $(document).on('turbolinks:load', function(){
+
     function buildHTML(message) {
       var img = message.image ? `<img src= ${ message.image }>` : "";
       var html = `<div class="message" date-id="${message.id}">
@@ -19,8 +20,8 @@ $(document).on('turbolinks:load', function(){
                     <p>
                       ${img}
                     </p>
-                  </div>`
-      return html
+                  </div>`;
+      return html;
     }
     $('#new_message').on('submit', function(e){
       e.preventDefault();
@@ -45,6 +46,7 @@ $(document).on('turbolinks:load', function(){
       .fail(function(data){
         alert('エラーが発生したためメッセージは送信できませんでした。');
       })
+
       .always(function(data){
         $('.chat-main__form__new-message__submit-btn').prop('disabled', false);
       })
@@ -69,6 +71,7 @@ $(document).on('turbolinks:load', function(){
             console.log('success');
           })
           .fail(function() {
+            alert('自動更新に失敗しました')
             console.log('error');
           });
         };
