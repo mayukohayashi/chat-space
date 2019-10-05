@@ -55,9 +55,11 @@ $(document).on('turbolinks:load', function(){
 
     $(function() {
 
-        var reloadMessages = function() {
+    });
+        function reloadMessages() {
           //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
           last_message_id = ※※※
+
           $.ajax({
             //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
             url: ※※※,
@@ -67,17 +69,16 @@ $(document).on('turbolinks:load', function(){
             //dataオプションでリクエストに値を含める
             data: {id: last_message_id}
           })
+
           .done(function(messages) {
-            console.log('success');
+            if(messages !=)
+
+
           })
+
           .fail(function() {
             alert('自動更新に失敗しました')
-            console.log('error');
           });
         };
-      });
 
-
-
-
-  })
+})
