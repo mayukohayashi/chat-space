@@ -7,7 +7,7 @@ $(function(){
                   <div class="message__upper-info">
                     <p class="message__upper-info__chatter">
                       ${message.user_name}
-                  </p>
+                    </p>
                   <p class="message__upper-info__date">
                     ${message.created_at}
                   </p>
@@ -41,6 +41,7 @@ $(function(){
       var html = buildHTML(data);
       $('.chat-main__messages').append(html);
       $('#new_message')[0].reset();
+      $('.chat-main__form__new-message__submit-btn').prop('disabled', false);
       $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight});
   })
 
@@ -48,9 +49,6 @@ $(function(){
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
 
-    .always(function(){
-      $('.chat-main__form__new-message__submit-btn').prop('disabled', false);
-    })
   })
 
   $(function(){
