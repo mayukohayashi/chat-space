@@ -56,7 +56,7 @@ $(document).on('turbolinks:load', function(){
 
     });
         function reloadMessages() {
-          last_message_id = ※※※
+          last_message_id = 
 
           $.ajax({
             url: url,
@@ -78,6 +78,11 @@ $(document).on('turbolinks:load', function(){
           .fail(function() {
             alert('自動更新に失敗しました')
           });
+
+          .always(function(data){
+            $('.chat-main__form__new-message__submit-btn').prop('disabled', false);
+          })
+
         };
     setInterval(reloadMessages, 5000);
 })
