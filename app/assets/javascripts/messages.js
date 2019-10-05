@@ -56,7 +56,10 @@ $(document).on('turbolinks:load', function(){
 
     });
         function reloadMessages() {
-          last_message_id = 
+          if($('.chat-main__messages'[0]) {
+            var last_message_id = $('.message:last')
+          })
+          last_message_id =
 
           $.ajax({
             url: url,
