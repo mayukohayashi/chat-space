@@ -73,9 +73,9 @@ $(function(){
           dataType: 'json',
           data: {id: last_message_id, group: group_id}
         })
-        .done(function(messages) {
-          if(messages != "null") {
-            $.each(messages, function(i, message){
+        .done(function(message) {
+          if(message != "null") {
+            $.each(message, function(i, message){
               var html = buildHTML(message);
           $('.chat-main__messages').append(html);
           $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight});
