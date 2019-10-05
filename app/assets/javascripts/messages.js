@@ -44,10 +44,10 @@ $(function(){
       $('.chat-main__form__new-message__submit-btn').prop('disabled', false);
       $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight});
   })
-
-    .fail(function(){
-      alert('エラーが発生したためメッセージは送信できませんでした。');
-    })
+  .fail(function(){
+    alert('エラーが発生したためメッセージは送信できませんでした。');
+    $('.chat-main__form__new-message__submit-btn').prop('disabled', false);
+  })
 
   })
 
@@ -63,7 +63,7 @@ $(function(){
         } else {
           var last_message_id = 0;
         }
-    url = '/groups/' + group_id + '/api/messages';
+          url = '/groups/' + group_id + '/api/messages';
 
         $.ajax({
           url: url,
@@ -71,9 +71,10 @@ $(function(){
           dataType: 'json',
           data: {id: last_message_id, group: group_id}
         })
-        .done(function(message) {
-          if(message != "null") {
-            $.each(message, function(i, message){
+        .done(function(messages) {
+          // ここのmessagesはmessageでも動作します。
+          if(messages != "null") {
+            $.each(messages, function(i, message){
               var html = buildHTML(message);
           $('.chat-main__messages').append(html);
           $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight});
