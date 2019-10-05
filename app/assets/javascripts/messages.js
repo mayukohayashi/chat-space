@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(function(){
 
   function buildHTML(message) {
 
@@ -22,7 +22,7 @@ $(document).on('turbolinks:load', function(){
                   </p>
                 </div>`;
     return html;
-  }
+  };
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -54,10 +54,12 @@ $(document).on('turbolinks:load', function(){
   })
 
   $(function() {
-    if(location.href.)
-  });
+    if(location.href.match(/\/groups\/\d+\/messages/)){
+      // setInterval(reloadMessages, 1000);
+    }
+  })
       function reloadMessages() {
-        if($('.chat-main__messages'[0]) {
+        if($('.message')[0]) {
           var last_message_id = $('.message:last').attr('data-id');
           var group_id = $('.message').attr('data-group-id');
         } else {
