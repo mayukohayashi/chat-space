@@ -36,7 +36,6 @@ $(document).on('turbolinks:load', function(){
         contentType: false
       })
     .done(function(data){
-
         var html = buildHTML(data);
         $('.chat-main__messages').append(html);
         $('#message_content').val('');
@@ -57,28 +56,28 @@ $(document).on('turbolinks:load', function(){
 
     });
         function reloadMessages() {
-          //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
           last_message_id = ※※※
 
           $.ajax({
-            //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
-            url: ※※※,
-            //ルーティングで設定した通りhttpメソッドをgetに指定
+            url: url,
             type: 'get',
             dataType: 'json',
-            //dataオプションでリクエストに値を含める
-            data: {id: last_message_id}
+            data: {id: last_message_id, group: group_id}
           })
 
           .done(function(messages) {
-            if(messages !=)
-
-
+            if(messages != "null"){
+              $.each(messages, function(i, message){
+                var html = buildHTML(message);
+                $('.chat-main__messages').append(html);
+                $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight});
+              })
+            }
           })
 
           .fail(function() {
             alert('自動更新に失敗しました')
           });
         };
-
+    setInterval(reloadMessages, 5000);
 })
