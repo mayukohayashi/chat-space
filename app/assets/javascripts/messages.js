@@ -55,7 +55,7 @@ $(function(){
 
   $(function() {
     if(location.href.match(/\/groups\/\d+\/messages/)){
-      // setInterval(reloadMessages, 1000);
+      setInterval(reloadMessages, 10000);
     }
   })
       function reloadMessages() {
@@ -89,5 +89,5 @@ $(function(){
         });
       };
 
-  setInterval(reloadMessages, 5000);
+  // setInterval(reloadMessages, 5000);
 })
