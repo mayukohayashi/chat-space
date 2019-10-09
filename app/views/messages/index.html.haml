@@ -6,10 +6,10 @@
         %h2.chat-main__header__leftbox__current-group
           = @group.name
         %ul.chat-main__header__leftbox__member-list
-          Member:
+          Member :
           - @group.users.each do |user|
             %li.chat-main__header____leftbox__member-list__member
-              = user.name
+              = user.name + "　"
       = link_to "Edit", edit_group_path(@group.id), class: "chat-main__header__edit-btn"
     .chat-main__messages
       = render @messages
