@@ -3,7 +3,7 @@ $(function(){
   function buildHTML(message) {
 
     var img = message.image ? `<img src= ${ message.image }>` : "";
-    var html = `<div class="message" date-id="${message.id}">
+    var html = `<div class="message" data-group-id="${ message.group_id }" data-id="${ message.id }">
                   <div class="message__upper-info">
                     <p class="message__upper-info__chatter">
                       ${message.user_name}
@@ -26,12 +26,12 @@ $(function(){
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
-    var message = new FormData(this);
+    var formData = new FormData(this);
     var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: 'POST',
-      data: message,
+      data: formData,
       dataType: 'json',
       processData: false,
       contentType: false
@@ -45,7 +45,7 @@ $(function(){
       $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight});
   })
   .fail(function(){
-    alert('エラーが発生したためメッセージは送信できませんでした。');
+    alert('メッセージを入力して下さい');
     $('.chat-main__form__new-message__submit-btn').prop('disabled', false);
   })
 
